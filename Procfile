@@ -1,1 +1,1 @@
-web: java -Dspring.server.port=$PORT -Dspring.profiles.active=production $JAVA_OPTS -jar "target/preProject-0.0.1-SNAPSHOT.jar"
+web: java -Dspring.server.port=$PORT -Dspring.profiles.active=production $JAVA_OPTS -jar "target/deployTestProject-0.0.1-SNAPSHOT.jar"
