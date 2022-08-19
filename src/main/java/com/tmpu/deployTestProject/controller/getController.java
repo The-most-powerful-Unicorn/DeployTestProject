@@ -14,9 +14,9 @@ public class getController {
     @RequestMapping(value = {"/test/call"})
     @ResponseBody
     public Map testRequest(HttpServletRequest request) {
-        Map Response = new HashMap<String, Object>();
-        Response.put("이름", "K-JUNA");
-        Response.put("소속", "The-Most-Powerful-UniCorn");
-        return Response;
+        Map response = new HashMap<String, Object>();
+        response.put("이름", "K-JUNA");
+        response.put("소속", "The-Most-Powerful-UniCorn");
+        return response;
     }
 }

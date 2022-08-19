@@ -16,10 +16,10 @@ public class postController {
 
     @RequestMapping(value = "/domain", method = RequestMethod.POST)
     @ResponseBody
-    public Map testCall (HttpServletRequest request){
-        Map result = new HashMap<String, Object>();
-        result.put("이름","ID");
-        result.put("ID","ID");
-        return result;
+    public Map testRequest (HttpServletRequest request){
+        Map response = new HashMap<String, Object>();
+        response.put("이름","ID");
+        response.put("ID","ID");
+        return response;
     }
 }
