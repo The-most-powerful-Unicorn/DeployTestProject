@@ -6,9 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-@RestController
+@RestController 
 @RequestMapping("/api")
-
 public class postController {
 
     @PostMapping(path = "/domain")
@@ -22,10 +21,3 @@ public class postController {
         return sb.toString();
     }
 }
-//    public Map testCall (HttpServletRequest request){
-//        Map result = new HashMap<String, Object>();
-//        result.put("이름","ID");
-//        result.put("ID","ID");
-//        return result;
-//    }
-//}
