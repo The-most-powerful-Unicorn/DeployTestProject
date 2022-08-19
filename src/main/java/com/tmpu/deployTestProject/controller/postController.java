@@ -1,23 +1,24 @@
 package com.tmpu.deployTestProject.controller;
 
-import org.springframework.web.bind.annotation.*;
+import com.google.gson.Gson;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
 import java.util.Map;
 
-@RestController 
-@RequestMapping("/api")
+@RestController // controller임을 알려주는 표시
+@RequestMapping("/api") //이곳으로 들어오는 API주소
 public class postController {
-
     @PostMapping(path = "/domain")
-    public String testPostMethod1(@RequestBody Map<String, String> quesryParameterMap) {
-        StringBuilder sb = new StringBuilder();
+    public String postMember(@RequestBody Map<String, Object> postData) {
 
-        quesryParameterMap.entrySet().forEach(entry -> {
-            System.out.println(entry.getKey() + " = " + entry.getValue() + "\n");
-            sb.append(entry.getKey() + " = " + entry.getValue() + "\n");
-        });
-        return sb.toString();
+        Gson gson = new Gson();
+
+        //Json 변환 부분
+        String jsonRequest = gson.toJson(postData);
+
+        return jsonRequest;
     }
 }
