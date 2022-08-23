@@ -15,7 +15,7 @@ public class PostController {
         StringBuilder sb = new StringBuilder();
 
         postdata.entrySet().forEach(entry -> {
-            System.out.println(entry.getKey()+ " = " + entry.getValue()+ "\n" );
+//            System.out.println(entry.getKey()+ " = " + entry.getValue()+ "\n" );
             sb.append(entry.getKey()+ " = " + entry.getValue()+"\n");
         });
 
