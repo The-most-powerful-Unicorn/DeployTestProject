@@ -1,10 +1,10 @@
-package com.tmpu.deployTestProject;
+package com.deploy.practice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DeployTestProjectApplicationTests {
+class PracticeApplicationTests {
 
 	@Test
 	void contextLoads() {
